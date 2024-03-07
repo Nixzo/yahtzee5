@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+<h1>Topplistan!</h1>
+{% if message %}
+<h3>{{ message }}</h3>
+{% else %}
+<ol>
+  {% for name, score in top_scores %}
+  <li>{{ name }}: {{ score }}</li>
+  {% endfor %}
+</ol>
+{% endif %} {% include 'footer.html' %}

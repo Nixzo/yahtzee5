@@ -1,0 +1,33 @@
+body {
+  background-color: #121212;
+  color: #f7f7f7;
+}
+.main-container-hand {
+  display: flex;
+  flex: 1;
+  background-color: #3f4768;
+  height: auto;
+}
+.navbar {
+  background-color: #333333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+@media (max-width: 999px) {
+  .main-container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.disabled-rule {
+  text-decoration: line-through;
+}
