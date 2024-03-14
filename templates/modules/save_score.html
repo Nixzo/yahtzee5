@@ -1,0 +1,15 @@
+{% if game_over_message %}
+<div class="row">
+  <div class="col-lg-12">
+    <div class="alert alert-success" role="alert">{{ game_over_message }}</div>
+    <form method="POST" action="{{ url_for('save_score') }}">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter your name to save your score!" name="player_name" required />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit">Save Score!</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endif %}

@@ -55,18 +55,19 @@ class Scoreboard:
 
     def get_highest_score(self, hand: Hand) -> str:
         """
-        Returnerna highscore.
+        Returnerar highscore.
 
         Returns:
             str: Namnet på den mest poänggivande regeln.
         """
         max_points = 0
-        best_rule = None
+        best_rule = "No points can be earned by any rule"
         for rule in self.rules:
-            points = rule.points(hand)
-            if points > max_points:
-                max_points = points
-                best_rule = rule.name
+            if rule.name not in self.used_rules:
+                points = rule.points(hand)
+                if points > max_points:
+                    max_points = points
+                    best_rule = rule.name
         return best_rule
 
     def finished(self) -> bool:
